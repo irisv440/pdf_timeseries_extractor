@@ -1,0 +1,7 @@
+# config.yaml
+
+grouping_mode: month     # 'month', 'week', 'none'
+date_format_style: EU    # 'EU' or 'US'
+main_folder: example_data
+output_folder: output
+
