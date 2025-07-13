@@ -13,11 +13,12 @@ The extractor has been rewritten in order to be domain-agnostic and can be reuse
 - Outputs cleaned `.xlsx` files in which each row represents a participant-day, and each column a separate parameter.
 
 ## Configuration
-Settings are defined in `config.yaml`. Example:
-main_folder: "example_data"
-output_folder: "output"
-grouping_mode: "month"        # Options: "month", "week", "none"
-date_format_style: "EU"       # Options: "EU", "US"
+Settings are defined in `config.yaml`.   
+Example:  
+main_folder: "example_data"  
+output_folder: "output"  
+grouping_mode: "month"        # Options: "month", "week", "none"  
+date_format_style: "EU"       # Options: "EU", "US"  
 
 ## Project Structure
 
@@ -43,13 +44,6 @@ date_format_style: "EU"       # Options: "EU", "US"
 • **generate_mock_timeseries_logs.py**  
  Optional script for generating synthetic participant PDF logs (for demo or testing).
 
-Example of config.yaml:
-
-grouping_mode: month     # 'month', 'week', 'none'
-date_format_style: EU    # 'EU' or 'US'
-main_folder: example_data
-output_folder: output
-
 ## How to use
 
 Make sure you are using Python 3.9 or higher.
@@ -61,10 +55,10 @@ Make sure you are using Python 3.9 or higher.
 4. Run the extractor: python pdf_timeseries_extractor.py
 Excel output will appear in the `output/` folder.
 
-Notes:
-• There is no limit to the number of PDFs to be processed.
-• The script automatically loops through all .pdf files in all participant folders under example_data/.
-• Performance may vary depending on your system, but typical research datasets (e.g. 10–100 participants × 1–4 PDFs each) are handled efficiently.
+Notes:  
+• There is no limit to the number of PDFs to be processed.  
+• The script automatically loops through all .pdf files in all participant folders under example_data/.  
+• Performance may vary depending on your system, but typical research datasets (e.g. 10–100 participants × 1–4 PDFs each) are handled efficiently.  
 
 ## Example Output
 - `timeseries_data_2020-07_EU_*.xlsx` → grouped per month (EU date style)
