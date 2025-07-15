@@ -100,5 +100,8 @@ for pid in participant_ids:
                 current_date += timedelta(days=random.randint(1, 2))
 
         filename = f"{pid}_week{i+1}.pdf"
-        path = os.path.join(output_dir, filename)
+        #path = os.path.join(output_dir, filename)
+        participant_dir = os.path.join(output_dir, pid)
+        os.makedirs(participant_dir, exist_ok=True) # Create folder for each participant
+        path = os.path.join(participant_dir, filename)
         pdf.output(path)
