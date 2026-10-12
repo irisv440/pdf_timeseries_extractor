@@ -23,7 +23,7 @@ def is_likely_date_line(line):
 
     numeric_match = re.match(r"^(?:\w+\s+)?\d{1,2}[/-]\d{1,2}[/-]\d{4}$", line)
     eu_text_match = re.match(r"^(?:\w+\s+)?\d{1,2}\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}$", line)
-    us_text_match = re.match(r"^(?:\w+\s+)?(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2}\s+\d{4}$", line)
+    us_text_match = re.match(r"^(?:\w+\s+)?(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}$", line)
 
     return bool(numeric_match or eu_text_match or us_text_match)   
         
@@ -32,8 +32,9 @@ def parse_flexible_date(date_str, dayfirst=True):
     Attempts to parse a date string using several known formats.
     Supports both numeric (e.g. 13/07/2020) and full month name formats (e.g. 13 July 2020).
     """
+    numeric_format = "%A %d/%m/%Y" if dayfirst else "%A %m/%d/%Y"
     try:
-        return datetime.strptime(date_str, "%A %d/%m/%Y")  # e.g., Thursday 13/07/2020
+        return datetime.strptime(date_str, numeric_format)  # e.g., Thursday 13/07/2020 (EU) or Thursday 07/13/2020 (US)
     except ValueError:
         try:
             return datetime.strptime(date_str, "%A %d %B %Y")  # e.g., Thursday 13 July 2020
