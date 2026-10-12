@@ -27,7 +27,7 @@ date_format_style: "EU"       # Options: "EU", "US"
 
 • **output/**  
  Output folder where grouped Excel files are saved. Example:  
- `timeseries_data_2020-07_EU_*.xlsx`, `timeseries_data_2020-08_US_*.xlsx`
+ `timeseries_data_2020-07_EU_*.xlsx`, `timeseries_data_2020-08_EU_*.xlsx`
 
 • **config.yaml**  
  YAML file where you define the data folder, output folder, date format (EU/US), and grouping mode (month/week/none).
@@ -63,8 +63,7 @@ Notes:
 ## Example Output
 - `timeseries_data_2020-07_EU_*.xlsx` → grouped per month (EU date style)
 - `timeseries_data_2020-08_EU_*.xlsx`
-- `timeseries_data_2020-07_US_*.xlsx` → grouped per month (US date style)
-- `timeseries_data_2020-08_US_*.xlsx`
+
 ## Notes
 - Non-date headers (e.g. "Log Week 1", decorative lines) are automatically skipped
 - Parameter/value pairs are only extracted after a valid date label
