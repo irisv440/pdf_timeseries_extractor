@@ -2,8 +2,8 @@
 A Python repository for extracting participant-level timeseries data from semi-structured PDFs.
 Supports multiple date formats (EU/US), flexible grouping (month/week), and clean Excel output formatting.
 
-The tool has originally been developed for analyzing time-based diary data in neuroscience and health research contexts (e.g. energy levels, task types, perceived strain). 
-The extractor has been rewritten in order to be domain-agnostic and can be reused in any context where PDFs contain temporal self-report logs.
+Designed for time-based diary data, such as in mental health research (e.g. energy levels, task types, perceived strain). 
+The extractor is domain-agnostic and can be reused in any context where PDFs contain temporal self-report logs.
 
 ## Key Features
 - Extracts `parameter: value` entries following recognized date lines
