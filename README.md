@@ -49,7 +49,7 @@ date_format_style: "EU"       # Options: "EU", "US"
 Make sure you are using Python 3.9 or higher.
 1. Install required packages using pip:
    ```bash
-   pip install pandas pdfplumber pyyaml python-dateutil
+   pip install pandas pdfplumber pyyaml python-dateutil openpyxl
 2. Place your participant PDFs in folders under `example_data/`
 3. Adjust `config.yaml` as needed
 4. Run the extractor: python pdf_timeseries_extractor.py
