@@ -23,7 +23,7 @@ date_format_style: "EU"       # Options: "EU", "US"
 ## Project Structure
 
 • **example_data/**  
- Contains sample participant folders with PDF logs. Each folder (e.g., `Participant_001/`) includes 4 weekly PDF files with semi-structured entries.
+Contains sample participant folders with PDF logs. Each folder (e.g., P001/ or Participant_005/) includes 4 weekly PDF files with semi-structured entries. Folder names can be chosen freely: every subfolder is treated as one participant.
 
 • **output/**  
  Output folder where grouped Excel files are saved. Example:  
@@ -49,7 +49,7 @@ date_format_style: "EU"       # Options: "EU", "US"
 Make sure you are using Python 3.9 or higher.
 1. Install required packages using pip:
    ```bash
-   pip install pandas pdfplumber pyyaml python-dateutil openpyxl
+   pip install -r requirements.txt
    ```
 2. Place your participant PDFs in folders under `example_data/`
 3. Adjust `config.yaml` as needed
